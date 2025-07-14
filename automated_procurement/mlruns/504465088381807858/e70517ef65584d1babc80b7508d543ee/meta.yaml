@@ -1,0 +1,14 @@
+artifact_uri: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/mlruns/504465088381807858/e70517ef65584d1babc80b7508d543ee/artifacts
+end_time: 1752050034707
+entry_point_name: ''
+experiment_id: '504465088381807858'
+lifecycle_stage: active
+run_id: e70517ef65584d1babc80b7508d543ee
+run_name: procurement_priority_random_forest
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752050029948
+status: 3
+tags: []
+user_id: Asus

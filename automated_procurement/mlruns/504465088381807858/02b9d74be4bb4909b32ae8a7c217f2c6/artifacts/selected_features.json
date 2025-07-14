@@ -1,0 +1,19 @@
+{
+  "selected_features": [
+    "Order Quantity_std",
+    "Demand_Variability",
+    "Revenue_per_Unit",
+    "Order_Frequency",
+    "Demand_Growth_Mean",
+    "Demand_Trend_Slope",
+    "Stockout_Frequency",
+    "Low_Stock_Frequency",
+    "On_Time_Delivery_mean",
+    "Delivery_Reliability",
+    "Safety_Stock",
+    "EOQ",
+    "Inventory_Days_Supply",
+    "Procurement_Priority_Score",
+    "ABC_Category_encoded"
+  ]
+}

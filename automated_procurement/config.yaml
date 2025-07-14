@@ -1,0 +1,172 @@
+
+# Data Paths
+data:
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  artifacts_path: "artifacts"
+  logs_path: "logs"
+
+# Pipeline Settings
+pipeline:
+  enable_data_validation: true
+  enable_feature_selection: true
+  save_intermediate_results: true
+  parallel_processing: false
+  
+# Data Ingestion Settings
+ingestion:
+  chunk_size: 10000
+  encoding: "utf-8"
+  date_format: "%Y-%m-%d"
+  skip_empty_lines: true
+  
+# Feature Engineering Settings
+feature_engineering:
+  # Procurement Metrics Parameters
+  safety_stock:
+    service_level: 0.95  # 95% service level for safety stock calculation
+    lead_time_variability_factor: 1.65  # Z-score for 95% confidence
+  
+  economic_order_quantity:
+    setup_cost: 50  # Fixed ordering cost per order
+    holding_cost_rate: 0.20  # 20% of unit cost per year
+  
+  abc_analysis:
+    category_a_threshold: 0.20  # Top 20% by revenue
+    category_b_threshold: 0.50  # Next 30% by revenue (20-50%)
+    # Category C is remaining 50%
+  
+  demand_forecasting:
+    seasonality_periods: [12, 4]  # Monthly and quarterly seasonality
+    trend_window: 6  # Months for trend calculation
+    holiday_months: [11, 12]  # November and December
+    back_to_school_months: [8, 9]  # August and September
+    summer_months: [6, 7, 8]  # Summer season
+  
+  inventory_thresholds:
+    low_stock_threshold: 5  # Units below which is considered low stock
+    overstock_multiplier: 2.0  # Times reorder point for overstock detection
+    stockout_threshold: 0  # Zero inventory
+  
+  supplier_performance:
+    on_time_tolerance_days: 0  # Days tolerance for on-time delivery
+    early_delivery_threshold: -1  # Days early to be considered early
+    late_delivery_threshold: 1  # Days late to be considered late
+
+# Data Quality Settings
+data_quality:
+  max_missing_percentage: 0.20  # Maximum 20% missing values allowed
+  duplicate_tolerance: 0.05  # Maximum 5% duplicates allowed
+  outlier_detection:
+    enabled: true
+    method: "iqr"  # Inter-quartile range method
+    factor: 1.5
+  
+  data_validation_rules:
+    order_quantity_min: 1
+    order_quantity_max: 10000
+    unit_cost_min: 0.01
+    unit_cost_max: 1000.0
+    inventory_min: 0
+
+# Machine Learning Features
+ml_features:
+  scaling_method: "standard"  # standard, minmax, robust
+  feature_selection:
+    enabled: true
+    method: "selectkbest"  # selectkbest, rfe, lasso
+    max_features: 50
+  
+  categorical_encoding:
+    method: "label"  # label, onehot, target
+    handle_unknown: "ignore"
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_rotation: true
+  max_file_size_mb: 10
+  backup_count: 5
+
+# Performance Settings
+performance:
+  memory_limit_gb: 4
+  cpu_cores: -1  # -1 for all available cores
+  chunk_processing: true
+  
+# Output Settings
+output:
+  save_formats: ["csv", "parquet"]  # Available: csv, parquet, json
+  compression: "gzip"
+  include_metadata: true
+  
+# Procurement Business Rules
+business_rules:
+  reorder_point:
+    buffer_days: 3  # Additional safety buffer
+    minimum_order_quantity: 1
+    maximum_order_quantity: 1000
+  
+  priority_scoring:
+    stockout_weight: 40  # Weight for stockout frequency in priority score
+    demand_growth_weight: 20  # Weight for demand growth
+    revenue_weight: 25  # Weight for revenue contribution
+    reliability_weight: 15  # Weight for delivery reliability
+  
+  procurement_actions:
+    urgent_reorder_threshold: 0  # Inventory level for urgent reorder
+    reduce_orders_multiplier: 2.0  # Overstock threshold multiplier
+    increase_stock_growth_threshold: 0.10  # 10% demand growth
+    decrease_stock_decline_threshold: -0.10  # -10% demand decline
+
+# Data Sources Configuration
+data_sources:
+  orders_and_shipments:
+    file_name: "orders_and_shipments.csv"
+    required_columns:
+      - "Product Name"
+      - "Order Quantity"
+      - "Order Year"
+      - "Order Month"
+      - "Order Day"
+      - "Gross Sales"
+      - "Profit"
+    date_columns:
+      - "Order Year"
+      - "Order Month"
+      - "Order Day"
+      - "Shipment Year"
+      - "Shipment Month"
+      - "Shipment Day"
+  
+  inventory:
+    file_name: "inventory.csv"
+    required_columns:
+      - "Product Name"
+      - "Year Month"
+      - "Warehouse Inventory"
+      - "Inventory Cost Per Unit"
+    
+  fulfillment:
+    file_name: "fulfillment.csv"
+    required_columns:
+      - "Product Name"
+      - "Warehouse Order Fulfillment (days)"
+
+# Environment Settings
+environment:
+  development:
+    debug_mode: true
+    sample_data_size: 1000  # Use subset for faster development
+    enable_profiling: true
+  
+  production:
+    debug_mode: false
+    sample_data_size: null  # Use full dataset
+    enable_profiling: false
+    
+  testing:
+    debug_mode: true
+    sample_data_size: 100
+    enable_profiling: false

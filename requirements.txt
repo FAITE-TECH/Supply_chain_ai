@@ -1,0 +1,60 @@
+# Core ML Libraries
+pandas
+numpy
+scikit-learn
+xgboost
+lightgbm
+
+# Data Processing and Analysis
+matplotlib
+seaborn
+plotly
+
+# Model Management and Serialization
+joblib
+
+# Configuration and Utilities
+pyyaml
+python-dotenv
+pathlib2
+
+# Development and Testing
+jupyter
+ipykernel
+pytest
+
+# Code Quality
+black
+flake8
+isort
+
+# Experiment Tracking and MLOps
+mlflow
+great-expectations
+evidently
+
+# Data Download
+kaggle
+requests
+
+# Monitoring and Logging
+psutil
+
+# Statistical Analysis
+scipy
+statsmodels
+
+# Time Series Analysis
+prophet
+
+# Optional: Advanced ML Libraries
+# lightgbm>=3.3.0
+# catboost>=1.0.0
+# tensorflow>=2.8.0
+
+# Flask
+flask
+flask-cors
+
+
+

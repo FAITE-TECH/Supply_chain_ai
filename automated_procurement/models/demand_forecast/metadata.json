@@ -1,0 +1,36 @@
+{
+  "task_name": "demand_forecast",
+  "model_name": "base_extra_trees",
+  "selected_features": [
+    "Order Quantity_std",
+    "Demand_Variability",
+    "Revenue_per_Unit",
+    "Profit_Margin",
+    "Demand_Trend_Slope",
+    "Current_Inventory",
+    "Stockout_Frequency",
+    "Low_Stock_Frequency",
+    "Warehouse_Fulfillment_Days",
+    "Delivery_Reliability",
+    "Safety_Stock",
+    "Reorder_Point",
+    "ABC_Category_encoded",
+    "Stock_Status_encoded",
+    "Recommended_Action_encoded"
+  ],
+  "metrics": {
+    "rmse": 0.10979473429446249,
+    "mae": 0.052876125,
+    "r2": 0.9900054773788148
+  },
+  "config": {
+    "task_type": "regression",
+    "description": "Predict future product demand based on historical patterns",
+    "target_col": "Order Quantity_mean",
+    "metric": "rmse",
+    "business_impact": "Inventory optimization and demand planning"
+  },
+  "training_timestamp": "2025-07-09T14:01:33.617315",
+  "model_file": "models\\demand_forecast\\model.pkl",
+  "scaler_file": "models\\demand_forecast\\scaler.pkl"
+}

@@ -1,0 +1,14 @@
+artifact_uri: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/mlruns/504465088381807858/a01b8ccc06964219bbb51a6adc79244a/artifacts
+end_time: 1752050044190
+entry_point_name: ''
+experiment_id: '504465088381807858'
+lifecycle_stage: active
+run_id: a01b8ccc06964219bbb51a6adc79244a
+run_name: procurement_priority_gradient_boosting
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752050039243
+status: 3
+tags: []
+user_id: Asus

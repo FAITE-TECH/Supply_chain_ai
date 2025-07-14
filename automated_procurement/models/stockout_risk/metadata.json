@@ -1,0 +1,36 @@
+{
+  "task_name": "stockout_risk",
+  "model_name": "base_extra_trees",
+  "selected_features": [
+    "Order Quantity_mean",
+    "Order Quantity_std",
+    "Demand_Variability",
+    "Revenue_per_Unit",
+    "Order_Frequency",
+    "Demand_Growth_Mean",
+    "Demand_Trend_Slope",
+    "Low_Stock_Frequency",
+    "On_Time_Delivery_mean",
+    "Delivery_Reliability",
+    "Safety_Stock",
+    "Reorder_Point",
+    "EOQ",
+    "Procurement_Priority_Score",
+    "ABC_Category_encoded"
+  ],
+  "metrics": {
+    "rmse": 0.0562333221125166,
+    "mae": 0.033674272486772704,
+    "r2": 0.9764961097968885
+  },
+  "config": {
+    "task_type": "regression",
+    "description": "Predict probability of stockout events",
+    "target_col": "Stockout_Frequency",
+    "metric": "mae",
+    "business_impact": "Proactive stockout prevention"
+  },
+  "training_timestamp": "2025-07-09T14:02:30.632139",
+  "model_file": "models\\stockout_risk\\model.pkl",
+  "scaler_file": "models\\stockout_risk\\scaler.pkl"
+}

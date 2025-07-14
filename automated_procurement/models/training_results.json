@@ -1,0 +1,99 @@
+{
+  "trained_models": {
+    "demand_forecast": {
+      "best_model": "base_extra_trees",
+      "metrics": {
+        "rmse": 0.10979473429446249,
+        "mae": 0.052876125,
+        "r2": 0.9900054773788148
+      },
+      "model_path": "models\\demand_forecast",
+      "config": {
+        "task_type": "regression",
+        "description": "Predict future product demand based on historical patterns",
+        "target_col": "Order Quantity_mean",
+        "metric": "rmse",
+        "business_impact": "Inventory optimization and demand planning"
+      }
+    },
+    "stockout_risk": {
+      "best_model": "base_extra_trees",
+      "metrics": {
+        "rmse": 0.0562333221125166,
+        "mae": 0.033674272486772704,
+        "r2": 0.9764961097968885
+      },
+      "model_path": "models\\stockout_risk",
+      "config": {
+        "task_type": "regression",
+        "description": "Predict probability of stockout events",
+        "target_col": "Stockout_Frequency",
+        "metric": "mae",
+        "business_impact": "Proactive stockout prevention"
+      }
+    },
+    "delivery_performance": {
+      "best_model": "base_random_forest",
+      "metrics": {
+        "rmse": 0.07258256549756519,
+        "mae": 0.04496345833333346,
+        "r2": 0.8220878945519047
+      },
+      "model_path": "models\\delivery_performance",
+      "config": {
+        "task_type": "regression",
+        "description": "Predict supplier delivery reliability",
+        "target_col": "Delivery_Reliability",
+        "metric": "r2",
+        "business_impact": "Supplier selection and management"
+      }
+    },
+    "procurement_priority": {
+      "best_model": "base_linear_regression",
+      "metrics": {
+        "rmse": 4.6367110330085604e-14,
+        "mae": 3.197442310920451e-14,
+        "r2": 1.0
+      },
+      "model_path": "models\\procurement_priority",
+      "config": {
+        "task_type": "regression",
+        "description": "Predict procurement priority scores",
+        "target_col": "Procurement_Priority_Score",
+        "metric": "rmse",
+        "business_impact": "Resource allocation optimization"
+      }
+    }
+  },
+  "performance_summary": [
+    {
+      "task": "demand_forecast",
+      "model": "base_extra_trees",
+      "rmse": 0.10979473429446249,
+      "r2": 0.9900054773788148,
+      "mae": 0.052876125
+    },
+    {
+      "task": "stockout_risk",
+      "model": "base_extra_trees",
+      "rmse": 0.0562333221125166,
+      "r2": 0.9764961097968885,
+      "mae": 0.033674272486772704
+    },
+    {
+      "task": "delivery_performance",
+      "model": "base_random_forest",
+      "rmse": 0.07258256549756519,
+      "r2": 0.8220878945519047,
+      "mae": 0.04496345833333346
+    },
+    {
+      "task": "procurement_priority",
+      "model": "base_linear_regression",
+      "rmse": 4.6367110330085604e-14,
+      "r2": 1.0,
+      "mae": 3.197442310920451e-14
+    }
+  ],
+  "training_timestamp": "2025-07-09T14:00:23.027761"
+}

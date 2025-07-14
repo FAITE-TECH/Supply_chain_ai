@@ -1,0 +1,62 @@
+{
+  "procurement_rules": {
+    "auto_approve_threshold": 1000.0,
+    "critical_stock_percentage": 0.1,
+    "reorder_point_multiplier": 1.5,
+    "max_order_value_without_approval": 5000.0,
+    "emergency_procurement_threshold": 0.05,
+    "bulk_order_discount_threshold": 10000.0
+  },
+  "supplier_selection": {
+    "reliability_weight": 0.4,
+    "price_weight": 0.3,
+    "delivery_time_weight": 0.2,
+    "quality_weight": 0.1,
+    "minimum_reliability_score": 0.7,
+    "preferred_suppliers": ["SUP001", "SUP002"],
+    "backup_suppliers": ["SUP003"]
+  },
+  "negotiation_settings": {
+    "enable_auto_negotiation": true,
+    "max_negotiation_rounds": 3,
+    "target_savings_percentage": 0.05,
+    "negotiation_timeout_hours": 24,
+    "min_order_value_for_negotiation": 500.0,
+    "negotiation_strategies": ["volume_discount", "payment_terms", "long_term_contract"]
+  },
+  "alert_settings": {
+    "low_stock_threshold": 0.2,
+    "stockout_risk_threshold": 0.7,
+    "delivery_delay_threshold_days": 2,
+    "high_demand_increase_threshold": 0.3,
+    "supplier_performance_decline_threshold": 0.1,
+    "notification_channels": ["email", "sms", "slack"]
+  },
+  "automation_settings": {
+    "enable_automated_ordering": true,
+    "enable_automated_approvals": true,
+    "enable_supplier_auto_selection": true,
+    "enable_price_monitoring": true,
+    "auto_approval_confidence_threshold": 0.8
+  },
+  "integration_settings": {
+    "erp_system_url": "http://localhost:8080/api",
+    "inventory_system_url": "http://localhost:8081/api",
+    "supplier_portal_url": "http://localhost:8082/api",
+    "payment_system_url": "http://localhost:8083/api",
+    "api_timeout_seconds": 30,
+    "retry_attempts": 3
+  },
+  "model_settings": {
+    "prediction_confidence_threshold": 0.7,
+    "model_refresh_interval_hours": 24,
+    "batch_prediction_size": 100,
+    "feature_importance_threshold": 0.1
+  },
+  "performance_thresholds": {
+    "demand_forecast_accuracy": 0.85,
+    "stockout_prediction_accuracy": 0.80,
+    "supplier_performance_accuracy": 0.75,
+    "procurement_priority_accuracy": 0.90
+  }
+}

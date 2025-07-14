@@ -1,0 +1,234 @@
+{
+  "selected_models": {
+    "demand_forecast": {
+      "model_info": {
+        "best_model": "base_extra_trees",
+        "metrics": {
+          "rmse": 0.10979473429446249,
+          "mae": 0.052876125,
+          "r2": 0.9900054773788148
+        },
+        "model_path": "models\\demand_forecast",
+        "config": {
+          "task_type": "regression",
+          "description": "Predict future product demand based on historical patterns",
+          "target_col": "Order Quantity_mean",
+          "metric": "rmse",
+          "business_impact": "Inventory optimization and demand planning"
+        }
+      },
+      "selection_criteria": {
+        "r2_score": 0.9900054773788148,
+        "rmse": 0.10979473429446249,
+        "readiness_level": "Ready",
+        "risk_level": "Low"
+      },
+      "recommendation": "Deploy",
+      "priority": "High",
+      "business_impact": {
+        "model_quality": {
+          "level": "Excellent",
+          "description": "Ready for production deployment",
+          "confidence": "High"
+        },
+        "expected_improvements": {
+          "inventory_cost_reduction_percent": 20.0,
+          "demand_accuracy_improvement_percent": 85.0,
+          "estimated_annual_savings": 24725.904000000002
+        },
+        "implementation_readiness": {
+          "readiness_level": "Ready",
+          "deployment_recommendation": "Proceed with production deployment",
+          "monitoring_requirements": "Standard monitoring",
+          "risk_level": "Low"
+        }
+      }
+    },
+    "stockout_risk": {
+      "model_info": {
+        "best_model": "base_extra_trees",
+        "metrics": {
+          "rmse": 0.0562333221125166,
+          "mae": 0.033674272486772704,
+          "r2": 0.9764961097968885
+        },
+        "model_path": "models\\stockout_risk",
+        "config": {
+          "task_type": "regression",
+          "description": "Predict probability of stockout events",
+          "target_col": "Stockout_Frequency",
+          "metric": "mae",
+          "business_impact": "Proactive stockout prevention"
+        }
+      },
+      "selection_criteria": {
+        "r2_score": 0.9764961097968885,
+        "rmse": 0.0562333221125166,
+        "readiness_level": "Ready",
+        "risk_level": "Low"
+      },
+      "recommendation": "Deploy",
+      "priority": "High",
+      "business_impact": {
+        "model_quality": {
+          "level": "Excellent",
+          "description": "Ready for production deployment",
+          "confidence": "High"
+        },
+        "expected_improvements": {
+          "stockout_prevention_rate_percent": 80.0,
+          "revenue_protection": "High"
+        },
+        "implementation_readiness": {
+          "readiness_level": "Ready",
+          "deployment_recommendation": "Proceed with production deployment",
+          "monitoring_requirements": "Standard monitoring",
+          "risk_level": "Low"
+        }
+      }
+    },
+    "delivery_performance": {
+      "model_info": {
+        "best_model": "base_random_forest",
+        "metrics": {
+          "rmse": 0.07258256549756519,
+          "mae": 0.04496345833333346,
+          "r2": 0.8220878945519047
+        },
+        "model_path": "models\\delivery_performance",
+        "config": {
+          "task_type": "regression",
+          "description": "Predict supplier delivery reliability",
+          "target_col": "Delivery_Reliability",
+          "metric": "r2",
+          "business_impact": "Supplier selection and management"
+        }
+      },
+      "selection_criteria": {
+        "r2_score": 0.8220878945519047,
+        "rmse": 0.07258256549756519,
+        "readiness_level": "Ready",
+        "risk_level": "Low"
+      },
+      "recommendation": "Deploy",
+      "priority": "High",
+      "business_impact": {
+        "model_quality": {
+          "level": "Excellent",
+          "description": "Ready for production deployment",
+          "confidence": "High"
+        },
+        "expected_improvements": {
+          "supplier_optimization_level": "Significant",
+          "lead_time_improvement_percent": 15.0
+        },
+        "implementation_readiness": {
+          "readiness_level": "Ready",
+          "deployment_recommendation": "Proceed with production deployment",
+          "monitoring_requirements": "Standard monitoring",
+          "risk_level": "Low"
+        }
+      }
+    },
+    "procurement_priority": {
+      "model_info": {
+        "best_model": "base_linear_regression",
+        "metrics": {
+          "rmse": 4.6367110330085604e-14,
+          "mae": 3.197442310920451e-14,
+          "r2": 1.0
+        },
+        "model_path": "models\\procurement_priority",
+        "config": {
+          "task_type": "regression",
+          "description": "Predict procurement priority scores",
+          "target_col": "Procurement_Priority_Score",
+          "metric": "rmse",
+          "business_impact": "Resource allocation optimization"
+        }
+      },
+      "selection_criteria": {
+        "r2_score": 1.0,
+        "rmse": 4.6367110330085604e-14,
+        "readiness_level": "Ready",
+        "risk_level": "Low"
+      },
+      "recommendation": "Deploy",
+      "priority": "High",
+      "business_impact": {
+        "model_quality": {
+          "level": "Excellent",
+          "description": "Ready for production deployment",
+          "confidence": "High"
+        },
+        "expected_improvements": {
+          "process_efficiency_gain_percent": 25.0,
+          "automation_potential": "High"
+        },
+        "implementation_readiness": {
+          "readiness_level": "Ready",
+          "deployment_recommendation": "Proceed with production deployment",
+          "monitoring_requirements": "Standard monitoring",
+          "risk_level": "Low"
+        }
+      }
+    }
+  },
+  "deployment_recommendations": [
+    {
+      "task": "demand_forecast",
+      "recommendation": "Deploy",
+      "priority": "High",
+      "r2_score": 0.9900054773788148
+    },
+    {
+      "task": "stockout_risk",
+      "recommendation": "Deploy",
+      "priority": "High",
+      "r2_score": 0.9764961097968885
+    },
+    {
+      "task": "delivery_performance",
+      "recommendation": "Deploy",
+      "priority": "High",
+      "r2_score": 0.8220878945519047
+    },
+    {
+      "task": "procurement_priority",
+      "recommendation": "Deploy",
+      "priority": "High",
+      "r2_score": 1.0
+    }
+  ],
+  "deployment_plan": {
+    "immediate_deployment": [
+      {
+        "task": "demand_forecast",
+        "recommendation": "Deploy",
+        "priority": "High",
+        "r2_score": 0.9900054773788148
+      },
+      {
+        "task": "stockout_risk",
+        "recommendation": "Deploy",
+        "priority": "High",
+        "r2_score": 0.9764961097968885
+      },
+      {
+        "task": "delivery_performance",
+        "recommendation": "Deploy",
+        "priority": "High",
+        "r2_score": 0.8220878945519047
+      },
+      {
+        "task": "procurement_priority",
+        "recommendation": "Deploy",
+        "priority": "High",
+        "r2_score": 1.0
+      }
+    ],
+    "pilot_deployment": [],
+    "future_development": []
+  },
+  "selection_timestamp": "2025-07-09T14:04:30.870549"
+}

@@ -1,0 +1,14 @@
+artifact_uri: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/mlruns/504465088381807858/231a201411f846b88193ba3f3261d16c/artifacts
+end_time: 1752049865098
+entry_point_name: ''
+experiment_id: '504465088381807858'
+lifecycle_stage: active
+run_id: 231a201411f846b88193ba3f3261d16c
+run_name: demand_forecast_xgboost
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752049860253
+status: 3
+tags: []
+user_id: Asus

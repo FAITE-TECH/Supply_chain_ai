@@ -1,0 +1,36 @@
+{
+  "task_name": "delivery_performance",
+  "model_name": "base_random_forest",
+  "selected_features": [
+    "Order Quantity_mean",
+    "Order Quantity_std",
+    "Demand_Variability",
+    "Revenue_per_Unit",
+    "Profit_Margin",
+    "Demand_Growth_Mean",
+    "Current_Inventory",
+    "Stockout_Frequency",
+    "Warehouse_Fulfillment_Days",
+    "On_Time_Delivery_mean",
+    "Safety_Stock",
+    "Reorder_Point",
+    "Procurement_Priority_Score",
+    "Stock_Status_encoded",
+    "Recommended_Action_encoded"
+  ],
+  "metrics": {
+    "rmse": 0.07258256549756519,
+    "mae": 0.04496345833333346,
+    "r2": 0.8220878945519047
+  },
+  "config": {
+    "task_type": "regression",
+    "description": "Predict supplier delivery reliability",
+    "target_col": "Delivery_Reliability",
+    "metric": "r2",
+    "business_impact": "Supplier selection and management"
+  },
+  "training_timestamp": "2025-07-09T14:03:28.654776",
+  "model_file": "models\\delivery_performance\\model.pkl",
+  "scaler_file": "models\\delivery_performance\\scaler.pkl"
+}

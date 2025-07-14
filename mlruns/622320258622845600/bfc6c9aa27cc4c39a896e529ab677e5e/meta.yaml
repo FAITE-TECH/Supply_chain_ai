@@ -1,0 +1,14 @@
+artifact_uri: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/../mlruns/622320258622845600/bfc6c9aa27cc4c39a896e529ab677e5e/artifacts
+end_time: 1752048922430
+entry_point_name: ''
+experiment_id: '622320258622845600'
+lifecycle_stage: active
+run_id: bfc6c9aa27cc4c39a896e529ab677e5e
+run_name: delivery_performance_lasso
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752048918502
+status: 3
+tags: []
+user_id: Asus

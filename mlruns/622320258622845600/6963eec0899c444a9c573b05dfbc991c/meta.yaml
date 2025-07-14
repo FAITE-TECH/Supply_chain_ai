@@ -1,0 +1,14 @@
+artifact_uri: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/../mlruns/622320258622845600/6963eec0899c444a9c573b05dfbc991c/artifacts
+end_time: 1752048873959
+entry_point_name: ''
+experiment_id: '622320258622845600'
+lifecycle_stage: active
+run_id: 6963eec0899c444a9c573b05dfbc991c
+run_name: stockout_risk_elastic_net
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752048870167
+status: 3
+tags: []
+user_id: Asus

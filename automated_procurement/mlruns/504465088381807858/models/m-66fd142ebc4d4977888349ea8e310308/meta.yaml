@@ -1,0 +1,10 @@
+artifact_location: file:///G:/Supply_Chain_ai/Supply_Chain_Ai/automated_procurement/mlruns/504465088381807858/models/m-66fd142ebc4d4977888349ea8e310308/artifacts
+creation_timestamp: 1752049951006
+experiment_id: '504465088381807858'
+last_updated_timestamp: 1752049954832
+model_id: m-66fd142ebc4d4977888349ea8e310308
+model_type: null
+name: model
+source_run_id: fd12f01216de4d1b89e3f6dd953dead7
+status: 2
+status_message: null

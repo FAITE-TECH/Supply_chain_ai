@@ -1,0 +1,25 @@
+{
+  "procurement_rules": {
+    "auto_approve_threshold": 1000.0,
+    "critical_stock_percentage": 0.1,
+    "reorder_point_multiplier": 1.5,
+    "max_order_value_without_approval": 5000.0
+  },
+  "supplier_selection": {
+    "reliability_weight": 0.4,
+    "price_weight": 0.3,
+    "delivery_time_weight": 0.2,
+    "quality_weight": 0.1
+  },
+  "negotiation_settings": {
+    "enable_auto_negotiation": true,
+    "max_negotiation_rounds": 3,
+    "target_savings_percentage": 0.05,
+    "negotiation_timeout_hours": 24
+  },
+  "alert_settings": {
+    "low_stock_threshold": 0.2,
+    "stockout_risk_threshold": 0.7,
+    "delivery_delay_threshold_days": 2
+  }
+}
